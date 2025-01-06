@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminisce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="logo">
+        <img src="logo.png" alt="Reminisce Logo" class="logo">
+        <h2>Dance Floor Simulation</h2>
+    </div>
+
+    <div id="app">
+        <header>
+            <nav>
+                <button class="nav-icon" data-screen="songs-screen">Choose Music</button>
+            </nav>
+        </header>
+
+        <main>
+            <!-- Home Screen -->
+            <div id="home-screen" class="screen active">
+                
+            </div>
+
+            <!-- Add this to the songs-screen -->
+            <div id="songs-screen" class="screen">
+                <div class="content">
+                    <h2>Songs</h2>
+                    <div id="song-list" class="list"></div>
+                    <h3>Upload New Song</h3>
+                    <form id="song-upload-form">
+                        <input type="file" id="song-file" accept="audio/*" required>
+                        <input type="text" id="song-name" placeholder="Song Name" required>
+                        <select id="song-difficulty" required>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                        <button type="submit" class="btn-primary">Upload Song</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <!-- Update the game-screen -->
+            <div id="game-screen" class="screen">
+                <div class="content">
+                    <h2 id="current-song"></h2>
+                    <div id="song-progress"></div>
+                    <div class="game-controls">
+                        <button id="play">Play</button>
+                        <button id="pause">Pause</button>
+                        <button id="stop">Stop</button>
+                        <button id="start">Start Game</button>
+                    </div>
+                    <br>
+                    <div id="game-board"></div>
+                    <div id="score">Score: 0</div>
+                    <div id="affirmation" class="message"></div>
+                </div>
+            </div>
+
+            
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
